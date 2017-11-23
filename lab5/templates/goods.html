@@ -1,0 +1,32 @@
+{%  extends 'base.html' %}
+
+{%  block head_buttons %}
+
+      <li><a href={% url 'main_url' %}>Домой</a></li>
+      <li><a href={% url "info_url" %}>Инфо</a></li>
+      <li class="active"><a href={% url "goods_url"%}>Товары</a></li>
+      <li><a href={% url "contacts_url" %}>Контакты</a></li>
+      <li><a href={% url "good_numb_url" 1%}><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+
+{% endblock %}
+
+
+{% block body1 %}
+
+    <h2>{{ goods_list }}</h2>
+
+    {% if good_id != "" %}
+        <h2>Good id is {{ good_id }}</h2>
+        <a href={% url "good_char_url" good_id %}>Characteristic</a>
+
+    {% else %}
+                <li><a class="hh" href={% url "good_numb_url" 1%}>Good1</a></li>
+                <li><a href={% url "good_numb_url" 2%}>Good2</a></li>
+                <li><a href={% url "good_numb_url" 3%}>Good3</a></li>
+                <li><a href={% url "good_numb_url" 4%}>Good4</a></li>
+                <li><a href={% url "good_numb_url" 5%}>Good5</a></li>
+                <li><a href={% url "good_numb_url" 6%}>Good6</a></li>
+                <li><a href={% url "good_numb_url" 7%}>Good7</a></li>
+    {% endif %}
+
+{% endblock %}

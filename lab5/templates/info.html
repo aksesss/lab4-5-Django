@@ -1,0 +1,14 @@
+{%  extends 'base.html' %}
+
+{%  block head_buttons %}
+
+      <li><a href={% url 'main_url' %}>Домой</a></li>
+      <li class="active"><a href="#">Инфо</a></li>
+      <li><a href={% url "goods_url" %}>Товары</a></li>
+      <li><a href={% url "contacts_url" %}>Контакты</a></li>
+      <li><a href="main1.html"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+{% endblock %}
+
+{%  block body1 %}
+    <h1>{{ main_text }}</h1>
+{% endblock %}

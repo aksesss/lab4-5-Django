@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body1 %} <h1>Class based view</h1>
+    <h1>{{ q }}</h1>
+{% endblock%}
+
+{%  block head_buttons %}
+
+      <li><a href={% url 'main_url' %}>Домой</a></li>
+      <li><a href={% url "info_url" %}>Инфо</a></li>
+      <li><a href={% url "goods_url"%}>Товары</a></li>
+      <li class="active"><a href={% url "contacts_url" %}>Контакты</a></li>
+      <li><a href={% url "good_numb_url" 1%}><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+{% endblock %}
+
